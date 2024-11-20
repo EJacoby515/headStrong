@@ -90,6 +90,7 @@ const AuthPage: React.FC = () => {
           autoCapitalize="none"
         />
         <TextInput
+          textContentType='none'
           style={styles.input}
           placeholder="Password"
           value={password}
@@ -98,6 +99,7 @@ const AuthPage: React.FC = () => {
         />
         {!isLogin && (
           <TextInput
+            textContentType='none'
             style={styles.input}
             placeholder="Confirm Password"
             value={confirmPassword}
