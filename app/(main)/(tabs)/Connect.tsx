@@ -1,62 +1,62 @@
 import React from "react";
-import { View, Text, SafeAreaView, StyleSheet } from 'react-native';
+import { View, Text, SafeAreaView, StyleSheet, TouchableOpacity } from 'react-native';
 import { StatusBar } from "expo-status-bar";
 
 const Connect: React.FC = () => {
-    return(
-        <SafeAreaView style={styles.container}>
-            <StatusBar style="auto" />
-            <View style={styles.content}>
-                <Text style={styles.title}>Connect</Text>
-            </View>
-            </SafeAreaView>
-                )
-}
-const styles = StyleSheet.create ({
+   return (
+        <View style = { styles.container}>
+            <StatusBar style = "light" />
+            <Text style = {styles.title}> How would you like to connect?</Text>
+            <TouchableOpacity style = {styles.button} onPress={() => {/* handle AI chat */}}>
+                <Text style = {styles.buttonText}>Chat with AI Assistance</Text>
+                <Text style = {styles.buttonSubtext}>Available 24/7 for instant support</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style = {styles.button} onPress={() => { /* handle Peer Chat */}}>
+                <Text style = {styles.buttonText}>Chat with a Peer</Text>
+                <Text style = {styles.buttonSubtext}>Anonymous chat with another community member</Text>
+            </TouchableOpacity>
+            <Text style = {styles.disclaimer}>
+                Note: Peer support in not A substitute for professional medical advice,disgnosis or treatment.
+            </Text>
+        </View>
+   );
+};
+
+const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#F5F7FA',
-    },
-    content: {
-        flex: 1,
-        padding: 20,
-        alignItems: 'center',
         justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: '#F5F7FA',
     },
     title: {
         fontSize: 24,
         fontWeight: 'bold',
         marginBottom: 20,
-    },
-    subtitle: {
-        fontSize: 16,
-        color: '#5B6B7C',
-        textAlign: 'center',
+        color: '#3A506B',
     },
     button: {
         backgroundColor: '#007AFF',
-        paddingVertical: 10,
+        paddingVertical: 12,
         paddingHorizontal: 20,
-        borderRadius: 5,
-        marginTop: 20,
+        borderRadius: 8,
+        marginBottom: 8,
     },
     buttonText: {
-        color: '#fff',
+        color: '#FFFFFF',
         fontSize: 16,
-        fontWeight: 'bold',
+        fontWeight: '600',
     },
-    input: {
-        width: '100%',
-        height: 40,
-        borderColor: '#D9D9D9',
-        borderWidth: 1,
-        borderRadius: 5,
-        paddingHorizontal: 10,
-        marginBottom: 20,
+    buttonSubtext: {
+        color: '#FFFFFF',
+        fontSize: 12,
+        fontWeight: '400',
     },
-    link: {
-        color: '#007AFF',
-        marginTop: 10,
-    },   
-})
+    disclaimer: {
+        marginTop: 20,
+        padding: 10,
+        color: '#E63946',
+        textAlign: 'center',
+    },
+});
 export default Connect;
