@@ -1,13 +1,14 @@
 import React from "react";
 import { View, Text, SafeAreaView, StyleSheet, TouchableOpacity } from 'react-native';
 import { StatusBar } from "expo-status-bar";
+import { router, useRouter } from "expo-router";
 
 const Connect: React.FC = () => {
    return (
         <View style = { styles.container}>
             <StatusBar style = "light" />
             <Text style = {styles.title}> How would you like to connect?</Text>
-            <TouchableOpacity style = {styles.button} onPress={() => {/* handle AI chat */}}>
+            <TouchableOpacity style = {styles.button} onPress={() => {router.push('../../chat/ai/index.tsx')}}>
                 <Text style = {styles.buttonText}>Chat with AI Assistance</Text>
                 <Text style = {styles.buttonSubtext}>Available 24/7 for instant support</Text>
             </TouchableOpacity>
