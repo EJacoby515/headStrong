@@ -8,11 +8,11 @@ const Connect: React.FC = () => {
         <View style = { styles.container}>
             <StatusBar style = "light" />
             <Text style = {styles.title}> How would you like to connect?</Text>
-            <TouchableOpacity style = {styles.button} onPress={() => {router.push('../../chat/ai/index.tsx')}}>
+            <TouchableOpacity style = {styles.button} onPress={() => { router.push('../../chat/ai/index.tsx')}}>
                 <Text style = {styles.buttonText}>Chat with AI Assistance</Text>
                 <Text style = {styles.buttonSubtext}>Available 24/7 for instant support</Text>
             </TouchableOpacity>
-            <TouchableOpacity style = {styles.button} onPress={() => { /* handle Peer Chat */}}>
+            <TouchableOpacity style = {styles.button} onPress={() => { router.push('../../chat/peer/index.tsx')}}>
                 <Text style = {styles.buttonText}>Chat with a Peer</Text>
                 <Text style = {styles.buttonSubtext}>Anonymous chat with another community member</Text>
             </TouchableOpacity>
